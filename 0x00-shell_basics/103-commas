@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s, " ./ ../ $(ls -A1vd */) | sed 's/, $/\n/'
+printf "%s, " ./ ../ $(ls -A1v) | sed 's/, $/\n/'
