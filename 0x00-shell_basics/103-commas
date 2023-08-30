@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A1v | sed -e 's/$/,/' -e '/\/$/!s/$/ /' | tr -d '\n' | sed 's/,$/\n/'
+printf "%s, " ./ ../ $(ls -A1v) | sed 's/, $/\n/'
