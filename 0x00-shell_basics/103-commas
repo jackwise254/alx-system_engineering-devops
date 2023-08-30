@@ -1,2 +1,9 @@
 #!/bin/bash
-printf "%s, " ./ ../ $(ls -A1v) | sed 's/, $/\n/'
+printf "./, ../, "
+for item in $(ls -A1v); do
+    if [ -d "$item" ]; then
+        printf "%s/, " "$item"
+    else
+        printf "%s, " "$item"
+    fi
+done | sed 's/, $/\n/'
