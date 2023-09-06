@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "$WATER" | bc -l <<< "obase=9; ibase=5; $WATER + $(echo "$STIR" | bc -l <<< "ibase=3; $STIR")"
